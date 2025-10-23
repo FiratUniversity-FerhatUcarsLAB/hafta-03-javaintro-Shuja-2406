@@ -1,13 +1,12 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        double en = 4.5;
-        double boy = 7.9;
+                double a = 3.0, b = 4.0, c = 5.0;
 
-        double alan = en * boy;
-        double cevre = 2 * (en + boy);
+        double s = (a + b + c) / 2; // yarı çevre
+        double alan = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
-        System.out.printf("En: %.2f, Boy: %.2f%n", en, boy);
+        System.out.printf("Kenarlar: a=%.1f, b=%.1f, c=%.1f%n", a, b, c);
+        System.out.printf("Yarı çevre (s): %.2f%n", s);
         System.out.printf("Alan: %.4f%n", alan);
-        System.out.printf("Çevre: %.4f%n", cevre);
     }
 }
