@@ -1,15 +1,17 @@
 public class App {
     public static void main(String[] args) {
+        double[] milDegerleri = {1, 5, 10, 20, 50};
+        double donusum = 1.609;
+
         System.out.println("==================================");
-        System.out.println("        ÜSLÜ SAYILAR TABLOSU      ");
+        System.out.println("       MİL → KİLOMETRE TABLOSU    ");
         System.out.println("==================================");
-        System.out.printf("%-5s %-10s %-10s%n", "a", "a^2", "a^3");
+        System.out.printf("%-10s %-15s%n", "Mil", "Kilometre");
         System.out.println("----------------------------------");
 
-        for (int a = 1; a <= 5; a++) {
-            int karesi = (int) Math.pow(a, 2);
-            int kupu = (int) Math.pow(a, 3);
-            System.out.printf("%-5d %-10d %-10d%n", a, karesi, kupu);
+        for (double mil : milDegerleri) {
+            double km = mil * donusum;
+            System.out.printf("%-10.2f %-15.3f%n", mil, km);
         }
 
         System.out.println("==================================");
