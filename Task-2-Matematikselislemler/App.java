@@ -1,11 +1,20 @@
 public class App {
     public static void main(String[] args) throws Exception {
-         double pay = (9.5 * 4.5) - (2.5 * 3);   // 42.75 - 7.5 = 35.25
-        double payda = 45.5 - 3.5;             // 42.0
-        double sonuc = pay / payda;            // ~0.839285714...
+     int n = 5;
+        int faktoriyel = 1;
 
-        System.out.printf("Pay: %.4f%n", pay);
-        System.out.printf("Payda: %.4f%n", payda);
-        System.out.printf("Sonuç (4 ondalık basamak): %.4f%n", sonuc);
+        System.out.println(n + "! hesaplama adımları:");
+        for (int i = n; i >= 1; i--) {
+            int onceki = faktoriyel;
+            faktoriyel *= i; // faktoriyel = faktoriyel * i
+
+            if (onceki == 0 || onceki == 1) {
+                // ilk çarpım (1 * 5) olarak göstermek yerine temiz gösterim
+                System.out.println("Adım: " + i + " -> ara sonuç = " + faktoriyel);
+            } else {
+                System.out.println("Adım: çarp " + i + " -> ara sonuç = " + faktoriyel);
+            }
+        }
+        System.out.println("Sonuç: " + n + "! = " + faktoriyel);
     }
 }
